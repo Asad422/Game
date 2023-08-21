@@ -271,7 +271,7 @@ final advices = {
 
 class _HomePageState extends State<HomePage> {
   final  cantGenerate = SnackBar(
-  content: Text('Генерация вопроса возможна каждые 20 секунд!'),
+  content: Text('Генерация вопроса возможна каждые 10 секунд!'),
 );
 
 final  noMoreQuestions = SnackBar(
@@ -460,7 +460,7 @@ final  notEnoughcoins = SnackBar(
 
   Future saveDate() async {
     var date = DateTime.now();
-    var dataSet = date.add(const Duration(seconds: 20));
+    var dataSet = date.add(const Duration(seconds: 10));
     await prefs?.setString('lastPressed', dataSet.toString());
   }
 }
